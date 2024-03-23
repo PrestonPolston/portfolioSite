@@ -29,7 +29,7 @@ const MediaLinks = () => {
         </IconButton>
       </Link>
 
-      <Link to={"https://www.linkedin.com/in/prestonpolston/"}>
+      <Link to={"www.linkedin.com/in/prestonpolston"}>
         <IconButton style={iconStyle} sx={{ p: 1 }}>
           <Badge>
             <LinkedInIcon />
