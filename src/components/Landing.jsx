@@ -4,14 +4,16 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import prestonPics from "../photos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import { Button, Link, Popper, Typography } from "@mui/material";
+import { Button, Link } from "@mui/material";
 
 const Landing = () => {
   const [copied, setCopied] = useState(false);
+  const [copiedMessage, setCopiedMessage] = useState("");
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText("prestonpolston@gmail.com");
     setCopied(true);
+    setCopiedMessage("Saved to clipboard");
     setTimeout(() => setCopied(false), 2000);
   };
 
