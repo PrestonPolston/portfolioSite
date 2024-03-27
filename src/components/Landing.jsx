@@ -1,11 +1,20 @@
-import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import prestonPics from "../photos";
-import { Button, Link } from "@mui/material";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { Button, Link, Popper, Typography } from "@mui/material";
 
 const Landing = () => {
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("prestonpolston@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div>
       <div style={{ textAlign: "center" }}>
@@ -13,11 +22,15 @@ const Landing = () => {
         <Link href="mailto:prestonpolston@gmail.com" underline="none">
           <Button variant="contained">Contact Me</Button>
         </Link>
+        <Button onClick={copyToClipboard}>
+          {copied && "saved to clipboard"}
+          <ContentCopyIcon />
+        </Button>
       </div>
       <Box
         sx={{
           width: "60%",
-          height: "80vh",
+          height: "75vh",
           overflowY: "scroll",
           margin: "0 auto",
         }}
@@ -25,12 +38,7 @@ const Landing = () => {
         <ImageList variant="masonry" cols={3} gap={8}>
           {prestonPics.map((item) => (
             <ImageListItem key={item.img}>
-              <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                alt={item.title}
-                loading="lazy"
-              />
+              <img src={item.img} alt={item.title} loading="lazy" />
             </ImageListItem>
           ))}
         </ImageList>
