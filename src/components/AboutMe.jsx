@@ -1,43 +1,17 @@
 import Carousel from "react-material-ui-carousel";
-
-const prestonPics = [
-  {
-    label: "End of Runway Inspection",
-    imgPath: "/endOfRunway.jpeg",
-  },
-  {
-    label: "Incentive Flight",
-    imgPath: "/incentiveFlight.jpeg",
-  },
-  {
-    label: "My Jet",
-    imgPath: "/jet.jpeg",
-  },
-  {
-    label: "Reventment",
-    imgPath: "/reventments.jpeg",
-  },
-  {
-    label: "Squadron Deployment Picture",
-    imgPath: "/squadronPic.jpeg",
-  },
-  {
-    label: "Maintenance Crew Picture",
-    imgPath: "/maintPic.jpeg",
-  },
-];
+import prestonPics from "../photos";
 
 const AboutMe = () => {
   return (
     <div>
-      <h2 style={{ textAlign: "center" }}>About Preston</h2>
+      <h2 style={{ alignItems: "center" }}>About Preston</h2>
       <div style={{ width: "80%", margin: "0 auto" }}>
         <Carousel>
           {prestonPics.map((image) => (
             <img
               key={image.id}
-              src={image.imgPath}
-              alt={image.label}
+              src={image.img}
+              alt={image.title}
               style={{
                 height: "400px",
                 objectFit: "contain",

@@ -9,8 +9,6 @@ import MyProjects from "./components/MyProjects";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import theme from "./styles/theme";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
@@ -23,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/aboutMe" element={<AboutMe />} />
-            <Route path="/contactMe" element={<ContactMe />} />
+            {/* <Route path="/contactMe" element={<ContactMe />} /> */}
             <Route path="/resume" element={<Resume />} />
             <Route path="/myProjects" element={<MyProjects />} />
           </Routes>

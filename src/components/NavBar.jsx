@@ -72,14 +72,14 @@ const NavBar = () => {
                 About Me
               </Link>
             </ListItemButton>
-            <ListItemButton>
+            {/* <ListItemButton>
               <Link
                 to="/contactMe"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 Contact Me
               </Link>
-            </ListItemButton>
+            </ListItemButton> */}
             <ListItemButton>
               <Link
                 to="/resume"
