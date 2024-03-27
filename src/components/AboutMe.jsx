@@ -29,7 +29,7 @@ const AboutMe = () => {
           ))}
         </Carousel>
       </div>
-      <div style={{ width: "75%", textAlign: "center" }}>
+      <div style={{ width: "75%" }}>
         <p>
           I'm Preston Polston, originally from Denison, Texas. My journey in web
           development began when I decided to dive into a Fullstack Academy Web
