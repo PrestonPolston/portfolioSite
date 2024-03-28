@@ -11,7 +11,7 @@ const AboutMe = () => {
         width: "100%",
       }}
     >
-      <h2>About Prestonon</h2>
+      <h2>About Preston</h2>
       <div style={{ width: "80%", margin: "0 auto" }}>
         <Carousel>
           {prestonPics.map((image) => (
